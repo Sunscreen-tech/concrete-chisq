@@ -26,6 +26,8 @@ circuit_chi_sq = chi_sq.compile(inputset)
 end = time.time()
 
 print(circuit_chi_sq.mlir)
+with open("foo", "w") as f:
+	f.write(circuit_chi_sq.mlir)
 
 print(f"Compile time {end - start}")
 
